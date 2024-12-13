@@ -1,0 +1,179 @@
+#########################################
+# spring profiles configuration
+#########################################
+spring:
+#  profiles:
+#    active: local
+#spring.profiles.active=test
+#spring.profiles.active=prod
+
+  # 国际化配置
+  messages:
+    basename: i18n/messages
+  #########################################
+  # multipart configuration
+  #########################################
+  servlet:
+    multipart:
+      max-request-size: 1024MB
+      max-file-size: 1024MB
+
+  #########################################
+  # datasource configuration
+  #########################################
+
+  # mysql
+  datasource:
+    dynamic:
+      datasource:
+        master:
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          url: jdbc:mysql://127.0.0.1:3306/xiaonuo?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&useInformationSchema=true
+          username: root
+          password: 123456
+
+        slave:
+            driver-class-name: com.mysql.cj.jdbc.Driver
+            url: jdbc:mysql://127.0.0.1:3306/xiaonuo?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&nullCatalogMeansCurrent=true&useInformationSchema=true
+            username: root
+            password: 123456
+      strict: true
+
+      # druid global configuration
+      public-key: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAMWiTVtdXFVrgFHDDKELZM0SywkWY3KjugN90eY5Sogon1j8Y0ClPF7nx3FuE7pAeBKiv7ChIS0vvx/59WUpKmUCAwEAAQ==
+      druid:
+        initial-size: 5
+        max-active: 20
+        min-idle: 5
+        max-wait: 60000
+        pool-prepared-statements: true
+        max-pool-prepared-statement-per-connection-size: 20
+        validation-query-timeout: 2000
+        test-on-borrow: false
+        test-on-return: false
+        test-while-idle: true
+        time-between-eviction-runs-millis: 6000
+        min-evictable-idle-time-millis: 300000
+        filters: stat
+        break-after-acquire-failure: false
+
+    # druid monitor configuration
+    druid:
+      stat-view-servlet:
+        enabled: true
+        login-username: admin
+        login-password: root@2023
+
+  #########################################
+  # jackson configuration
+  #########################################
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+    locale: zh_CN
+
+  #########################################
+  # redis configuration
+  #########################################
+  redis:
+    database: 1
+    host: 127.0.0.1
+    port: 6379
+    password:
+    timeout: 10s
+    lettuce:
+      pool:
+        max-active: 200
+        max-wait: -1ms
+        max-idle: 10
+        min-idle: 0
+
+#########################################
+# easy-trans configuration
+#########################################
+easy-trans:
+  is-enable-redis: true
+  is-enable-global: true
+  is-enable-tile: true
+
+#########################################
+# sa-token configuration
+#########################################
+sa-token:
+  token-name: token
+  timeout: 2592000
+  activity-timeout: -1
+  is-concurrent: true
+  is-share: false
+  max-login-count: -1
+  token-style: random-32
+  is-log: false
+  is-print: false
+
+# sa-token alone-redis configuration
+  alone-redis:
+    database: 2
+    host: ${spring.redis.host}
+    port: ${spring.redis.port}
+    password: ${spring.redis.password}
+    timeout: ${spring.redis.timeout}
+    lettuce:
+      pool:
+        max-active: ${spring.redis.lettuce.pool.max-active}
+        max-wait: ${spring.redis.lettuce.pool.max-wait}
+        max-idle: ${spring.redis.lettuce.pool.max-idle}
+        min-idle: ${spring.redis.lettuce.pool.min-idle}
+mqtt:
+  broker-url: tcp://127.0.0.1:1883
+  client-id: emq-client-web
+  username: admin
+  password: abcd12345678
+#########################################
+# knife4j configuration
+#########################################
+knife4j:
+  enable: true
+  production: false
+  basic:
+    enable: false
+    username: admin
+    password: root@2023
+  setting:
+    enableOpenApi: false
+    enableSwaggerModels: false
+    enableFooter: false
+    enableFooterCustom: true
+    footerCustomContent: Apache License 2.0 | Copyright 2022-[WELLIH](https://www.jcxxdd.com)
+
+#########################################
+# camunda configuration
+#########################################
+camunda:
+  bpm:
+    database:
+      schema-update: true
+    auto-deployment-enabled: false
+    job-execution:
+      enabled: false
+    eventing:
+      history: false
+    metrics:
+      enabled: false
+
+#########################################
+# snowy configuration
+#########################################
+
+# common configuration
+snowy:
+  config:
+    common:
+      front-url: http://localhost:9000
+      backend-url: http://localhost:9101
+
+    # plugin ten configuration
+    ten:
+      enabled: false
+      ignore-table-names:
+      ten-id-column-name: TENANT_ID
+      default-ten-id: -1

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jackli</groupId>
+        <artifactId>xiaonuo</artifactId>
+        <version>2.0.0</version>
+    </parent>
+
+    <artifactId>qiye-web-app</artifactId>
+    <packaging>jar</packaging>
+    <description>主应用启动组件</description>
+    <properties>
+        <!-- maven base -->
+        <java.version>1.8</java.version>
+        <maven.compiler.plugin.version>3.7.0</maven.compiler.plugin.version>
+        <maven.source.plugin>3.0.1</maven.source.plugin>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <skipTests>true</skipTests>
+
+        <!-- qiye-base -->
+        <spring.boot-version>2.5.12</spring.boot-version>
+        <spring.cloud-version>2020.0.6</spring.cloud-version>
+        <spring.cloud.bootstrap-version>3.1.3</spring.cloud.bootstrap-version>
+        <spring.cloud.alibaba-version>2021.1</spring.cloud.alibaba-version>
+        <spring.boot.admin-version>2.5.6</spring.boot.admin-version>
+
+        <!-- qiye-common -->
+        <lombok.versin>1.18.22</lombok.versin>
+        <druid.version>1.2.9</druid.version>
+        <mybatis.plus.version>3.5.2</mybatis.plus.version>
+        <easy.trans.version>2.0.3</easy.trans.version>
+        <commons.pool2.version>2.11.1</commons.pool2.version>
+        <hutool.version>5.8.8</hutool.version>
+        <pinyin.version>2.5.1</pinyin.version>
+        <ip2region.version>2.6.3</ip2region.version>
+        <knife4j.version>2.0.9</knife4j.version>
+        <easypoi.version>4.3.0</easypoi.version>
+        <smcrypto.version>0.3.2</smcrypto.version>
+
+        <!-- qiye-web-app -->
+        <jnuit.version>4.13.2</jnuit.version>
+        <mysql.connector.java.version>8.0.28</mysql.connector.java.version>
+        <mssql.connector.java.version>7.2.2.jre8</mssql.connector.java.version>
+
+        <mybatis-spring-boot-starter.version>2.1.4</mybatis-spring-boot-starter.version>
+
+    </properties>
+    <dependencies>
+
+        <!-- junit-->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- mysql -->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+
+        <!-- qiye-common -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-common</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- 登录鉴权插件 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-auth-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- C端功能插件 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-client-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- 多数据源插件 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-dbs-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- 开发工具插件 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-dev-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-mobile-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- 系统功能插件 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-sys-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- 动态租户插件-->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-ten-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+        <!-- bootstrap 配置加载 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
+            <version>3.1.3</version>
+        </dependency>
+
+        <!-- caffeine缓存实现 -->
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+        </dependency>
+
+
+        <!-- admin -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>3.1.3</version>
+        </dependency>
+
+        <!-- 业务功能插件 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-biz-func</artifactId>
+            <version>2.0.0</version>
+        </dependency>
+
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.12</version>
+                <configuration>
+                    <includeSystemScope>true</includeSystemScope>
+                    <fork>true</fork>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
