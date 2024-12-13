@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.jackli.dev.modular.log.mapper.DevLogMapper">
+
+<select id="selectLogCaculate" resultType="com.jackli.dev.modular.log.result.DevLogCaculateDataResult">
+    SELECT
+        log.CATEGORY type,
+        count(log.ID) count
+    FROM
+        dev_log log
+    GROUP BY log.CATEGORY
+</select>
+</mapper>
