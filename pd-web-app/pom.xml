@@ -116,7 +116,7 @@
         <!-- 动态租户插件-->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-ten-func</artifactId>
+            <artifactId>pd-plugin-ten-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 
