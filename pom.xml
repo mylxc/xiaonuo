@@ -5,9 +5,9 @@
 
     <groupId>com.jackli</groupId>
     <artifactId>xiaonuo</artifactId>
-    <name>qiye-cloud</name>
+    <name>pd-cloud</name>
     <version>2.0.0</version>
-    <description>qiye-cloud快速开发平台</description>
+    <description>pd-cloud快速开发平台</description>
     <packaging>pom</packaging>
 
     <parent>
@@ -59,10 +59,10 @@
 
     <modules>
         <!-- 公共开发模块 -->
-        <module>qiye-common</module>
+        <module>pd-common</module>
 
         <!-- 业务应用启动模块 -->
-        <module>qiye-web-app</module>
+        <module>pd-web-app</module>
 
         <!-- 业务插件模块 -->
         <module>qiye-plugin</module>

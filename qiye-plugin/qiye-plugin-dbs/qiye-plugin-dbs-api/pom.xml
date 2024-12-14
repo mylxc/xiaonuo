@@ -18,7 +18,7 @@
         <!-- 每个插件接口都要引入common -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-common</artifactId>
+            <artifactId>pd-common</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
     </dependencies>

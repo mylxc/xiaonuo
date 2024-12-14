@@ -10,7 +10,7 @@
         <version>2.0.0</version>
     </parent>
 
-    <artifactId>qiye-web-app</artifactId>
+    <artifactId>pd-web-app</artifactId>
     <packaging>jar</packaging>
     <description>主应用启动组件</description>
     <properties>
@@ -65,10 +65,10 @@
             <artifactId>mysql-connector-java</artifactId>
         </dependency>
 
-        <!-- qiye-common -->
+        <!-- pd-common -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-common</artifactId>
+            <artifactId>pd-common</artifactId>
             <version>2.0.0</version>
         </dependency>
 
