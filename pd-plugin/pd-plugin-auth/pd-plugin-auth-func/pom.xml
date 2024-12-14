@@ -24,7 +24,7 @@
         <!-- 每个插件都要引入自己的对外接口 -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-auth-api</artifactId>
+            <artifactId>pd-plugin-auth-api</artifactId>
             <version>${project.parent.version}</version>
         </dependency>
 

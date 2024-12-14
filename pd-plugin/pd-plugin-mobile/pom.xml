@@ -10,16 +10,16 @@
         <version>2.0.0</version>
     </parent>
 
-    <artifactId>qiye-plugin-mobile</artifactId>
+    <artifactId>pd-plugin-mobile</artifactId>
     <packaging>pom</packaging>
     <description>移动端管理功能插件</description>
 
     <modules>
         <!-- 移动端管理功能插件api接口 -->
-        <module>qiye-plugin-mobile-api</module>
+        <module>pd-plugin-mobile-api</module>
 
         <!-- 移动端管理功能插件func实现 -->
-        <module>qiye-plugin-mobile-func</module>
+        <module>pd-plugin-mobile-func</module>
     </modules>
 
 </project>
