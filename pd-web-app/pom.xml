@@ -75,41 +75,41 @@
         <!-- 登录鉴权插件 -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-auth-func</artifactId>
+            <artifactId>pd-plugin-auth-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 
         <!-- C端功能插件 -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-client-func</artifactId>
+            <artifactId>pd-plugin-client-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 
         <!-- 多数据源插件 -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-dbs-func</artifactId>
+            <artifactId>pd-plugin-dbs-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 
         <!-- 开发工具插件 -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-dev-func</artifactId>
+            <artifactId>pd-plugin-dev-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-mobile-func</artifactId>
+            <artifactId>pd-plugin-mobile-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 
         <!-- 系统功能插件 -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-sys-func</artifactId>
+            <artifactId>pd-plugin-sys-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 
@@ -144,7 +144,7 @@
         <!-- 业务功能插件 -->
         <dependency>
             <groupId>com.jackli</groupId>
-            <artifactId>qiye-plugin-biz-func</artifactId>
+            <artifactId>pd-plugin-biz-func</artifactId>
             <version>2.0.0</version>
         </dependency>
 

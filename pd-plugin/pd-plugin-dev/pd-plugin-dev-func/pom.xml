@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jackli</groupId>
+        <artifactId>pd-plugin-dev</artifactId>
+        <version>2.0.0</version>
+    </parent>
+
+    <artifactId>pd-plugin-dev-func</artifactId>
+    <packaging>jar</packaging>
+    <description>开发工具插件func实现</description>
+    <properties>
+        <mybatis.plus.dynamic.datasource.version>3.5.1</mybatis.plus.dynamic.datasource.version>
+    </properties>
+    <dependencies>
+        <!-- 每个插件都要引入自己的对外接口 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>qiye-plugin-dev-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>dynamic-datasource-spring-boot-starter</artifactId>
+            <version>${mybatis.plus.dynamic.datasource.version}</version>
+        </dependency>
+
+        <!-- 引入登录鉴权接口，用于获取登录用户 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-auth-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- 引入系统接口，用于获取用户等功能 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-sys-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- 引入多租户接口，用于多租户的配置 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-ten-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+</project>

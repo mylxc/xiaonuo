@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jackli</groupId>
+        <artifactId>pd-plugin-ten</artifactId>
+        <version>2.0.0</version>
+    </parent>
+
+    <artifactId>pd-plugin-ten-func</artifactId>
+    <packaging>jar</packaging>
+    <description>动态租户插件func实现</description>
+
+    <dependencies>
+        <!-- 每个插件都要引入自己的对外接口 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-ten-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- 引入auth接口，用于获取用户信息等 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-auth-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- 引入配置接口，用于获取相关配置 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-dev-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- 引入多数据源接口，用于分库的租户数据源切换 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-dbs-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+
+        <!-- 引入系统接口，用于获取用户等功能 -->
+        <dependency>
+            <groupId>com.jackli</groupId>
+            <artifactId>pd-plugin-sys-api</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+</project>
