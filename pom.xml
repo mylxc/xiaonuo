@@ -65,7 +65,7 @@
         <module>pd-web-app</module>
 
         <!-- 业务插件模块 -->
-        <module>qiye-plugin</module>
+        <module>pd-plugin</module>
 
     </modules>
 
